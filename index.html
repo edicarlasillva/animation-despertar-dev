@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .element {
+    width: 100%;
+    height: 100%;
+    animation: transition-color 5s infinite;
+    /* animation-name: transition-color;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; */
+  }
+
+  .element-2 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    animation: fadeInAndMove 2s ease infinite;
+    /* animation-timing-function: linear; */
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  @keyframes transition-color {
+    0% {
+      background-color: red;
+    }
+
+    100% {
+      background-color: orange;
+    }
+  }
+
+  @keyframes move-right {
+    from {
+      transform: translateX(0)
+    }
+
+    to {
+      transform: translateX(100px)
+    }
+  }
+
+  @keyframes fadeInAndMove {
+    0% {
+      opacity: 0;
+      transform: translateY(-100px);
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(100px);
+    }
+  }
+</style>
+
+<body>
+  <!-- <div class="element"></div> -->
+  <div class="element-2"></div>
+</body>
+
+</html>
